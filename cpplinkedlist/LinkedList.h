@@ -4,15 +4,17 @@ template<typename T>
 struct NodeItem
 {
 	T _data;
-	NodeItem* next;
+	NodeItem* _next;
 };
 
 template<typename T>
 class LinkedList
 {
 private:
-	NodeItem* _head;
+	NodeItem<T>* _head;
 
 public:
-	LinkedList();
+	LinkedList(void);
+	bool insert(T& data);
+	void insert(NodeItem<T>& node);
 };
