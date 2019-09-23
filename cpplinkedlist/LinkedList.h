@@ -12,9 +12,12 @@ class LinkedList
 {
 private:
 	NodeItem<T>* _head;
+	unsigned int _size;
 
 public:
 	LinkedList(void);
 	bool insert(T& data);
-	void insert(NodeItem<T>& node);
+	void remove(NodeItem<T>* node);
+
+	NodeItem<T>* find_item(T& data);
 };
